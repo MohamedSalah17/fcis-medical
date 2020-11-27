@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 23, 2020 at 11:47 AM
+-- Generation Time: Nov 27, 2020 at 07:31 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.33
 
@@ -68,13 +68,6 @@ CREATE TABLE `assignments` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `assignments`
---
-
-INSERT INTO `assignments` (`id`, `lesson_id`, `sbj_id`, `doc_id`, `name`, `start_date`, `end_date`, `pdf_quest`, `pdf_anss`, `created_at`, `updated_at`) VALUES
-(12, 18, 50, 65, 'test assign', '2020-11-23', '2020-11-30', '1606127331.pdf', NULL, '2020-11-23 08:28:51', '2020-11-23 08:28:51');
 
 -- --------------------------------------------------------
 
@@ -152,7 +145,7 @@ INSERT INTO `doctors` (`id`, `name`, `username`, `email`, `phone`, `password`, `
 (57, 'د. أحمد عنتر', '01002325970', '01002325970', '01002325970', '$2y$10$BYHk31zVtnZR1aJY8ZvMneSmjtwQYuzCselb5iFhsdpi4EFJxsmFK', 1, 0, '2020-11-02 10:38:37', '2020-11-02 10:38:37'),
 (58, 'أ.م.د. خالد عدلى', '01004879295', '01004879295', '01004879295', '$2y$10$OePt4CPCWFxbQbJxhm/4vOfuj.v5Cqrh9oRcBlGvugl3c8X0hLT5m', 1, 0, '2020-11-02 10:38:37', '2020-11-02 10:38:37'),
 (59, 'د. عمرو عبد العزيز', '01021264641', '01021264641', '01021264641', '$2y$10$1cu896VYZ8HCUg834Zi9W.k7xqp3Cut/XBbYAD12oYvwW6.90FzqC', 1, 0, '2020-11-02 10:38:37', '2020-11-02 10:38:37'),
-(65, 'test doc', 'test doc', 'testdoc@gmail.com', '00124552', '$2y$10$1AMbQ56c4WrcNpcb6k1CX.KQkjqfpVIMB3n87k.m2k621Gg9ESCWG', 1, 0, '2020-11-23 08:26:53', '2020-11-23 08:26:53');
+(67, 'test 2', 'test2', 'test2@admin.com', '01234567890', '$2y$10$XCfEjRPra5fTAiSjecnNM.MC3MUUgaknvDaAw6G8NXNBqj2hb8bH2', 1, 0, '2020-11-25 09:50:03', '2020-11-25 09:50:03');
 
 -- --------------------------------------------------------
 
@@ -179,8 +172,7 @@ CREATE TABLE `lessons` (
 --
 
 INSERT INTO `lessons` (`id`, `sbj_id`, `doc_id`, `name`, `date`, `pdf_file`, `mp4_file`, `pptx_file`, `youtube_link`, `created_at`, `updated_at`) VALUES
-(16, 28, 40, 'test lesson', '2020-11-09', '1604914371.pdf', '1604914371.mp4', '1604914371.pptx', 'https://youtu.be/0JiP8jSFT3E', '2020-11-09 07:32:51', '2020-11-09 07:32:51'),
-(18, 50, 65, 'test lesson', '2020-11-23', '1606127314.pdf', NULL, '1606127314.pdf', NULL, '2020-11-23 08:28:34', '2020-11-23 08:28:34');
+(16, 28, 40, 'test lesson', '2020-11-09', '1604914371.pdf', '1604914371.mp4', '1604914371.pptx', 'https://youtu.be/0JiP8jSFT3E', '2020-11-09 07:32:51', '2020-11-09 07:32:51');
 
 -- --------------------------------------------------------
 
@@ -369,7 +361,15 @@ INSERT INTO `login_histories` (`id`, `ip`, `phone_details`, `user_id`, `created_
 (137, '127.0.0.1', 'Chrome/87.0.4280.66', 1532, '2020-11-23 08:22:49', '2020-11-23 08:22:49'),
 (138, '127.0.0.1', 'Chrome/87.0.4280.66', 1, '2020-11-23 08:23:39', '2020-11-23 08:23:39'),
 (139, '127.0.0.1', 'Chrome/87.0.4280.66', 1541, '2020-11-23 08:28:09', '2020-11-23 08:28:09'),
-(140, '127.0.0.1', 'Chrome/87.0.4280.66', 1540, '2020-11-23 08:29:06', '2020-11-23 08:29:06');
+(140, '127.0.0.1', 'Chrome/87.0.4280.66', 1540, '2020-11-23 08:29:06', '2020-11-23 08:29:06'),
+(141, '127.0.0.1', 'Chrome/87.0.4280.66', 1541, '2020-11-23 08:53:35', '2020-11-23 08:53:35'),
+(142, '127.0.0.1', 'Gecko)', 1541, '2020-11-23 10:56:39', '2020-11-23 10:56:39'),
+(143, '127.0.0.1', 'Gecko)', 1, '2020-11-23 11:34:46', '2020-11-23 11:34:46'),
+(144, '127.0.0.1', 'Chrome/87.0.4280.66', 1541, '2020-11-24 04:17:34', '2020-11-24 04:17:34'),
+(145, '127.0.0.1', 'Chrome/87.0.4280.66', 1, '2020-11-24 05:56:10', '2020-11-24 05:56:10'),
+(146, '127.0.0.1', 'Chrome/87.0.4280.66', 1, '2020-11-25 09:38:40', '2020-11-25 09:38:40'),
+(147, '127.0.0.1', 'Chrome/87.0.4280.66', 1, '2020-11-25 09:41:59', '2020-11-25 09:41:59'),
+(148, '127.0.0.1', 'Chrome/87.0.4280.66', 1, '2020-11-27 16:12:40', '2020-11-27 16:12:40');
 
 -- --------------------------------------------------------
 
@@ -616,6 +616,26 @@ CREATE TABLE `permission_user` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `problems`
+--
+
+CREATE TABLE `problems` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` enum('default','success','warning','error') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` enum('student','doctor') COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `notes` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `comment` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `code` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `roles`
 --
 
@@ -696,9 +716,10 @@ INSERT INTO `role_user` (`role_id`, `user_id`, `user_type`) VALUES
 (4, 63, 'App\\User'),
 (3, 64, 'App\\Doctor'),
 (4, 64, 'App\\User'),
-(3, 65, 'App\\Doctor'),
 (4, 65, 'App\\User'),
+(3, 66, 'App\\Doctor'),
 (4, 66, 'App\\User'),
+(3, 67, 'App\\Doctor'),
 (4, 67, 'App\\User'),
 (4, 68, 'App\\User'),
 (4, 69, 'App\\User'),
@@ -1499,7 +1520,7 @@ INSERT INTO `role_user` (`role_id`, `user_id`, `user_type`) VALUES
 (3, 1534, 'App\\User'),
 (4, 1538, 'App\\User'),
 (4, 1540, 'App\\User'),
-(3, 1541, 'App\\User');
+(3, 1542, 'App\\User');
 
 -- --------------------------------------------------------
 
@@ -1963,13 +1984,6 @@ CREATE TABLE `student_assignments` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `student_assignments`
---
-
-INSERT INTO `student_assignments` (`id`, `student_id`, `assign_id`, `pdf_anss`, `lesson_id`, `sbj_id`, `doc_id`, `grade`, `created_at`, `updated_at`) VALUES
-(9, 1514, 12, '1606128339.pdf', '18', '50', '65', NULL, '2020-11-23 08:45:39', '2020-11-23 08:45:39');
 
 -- --------------------------------------------------------
 
@@ -4734,8 +4748,7 @@ INSERT INTO `student_subjects` (`id`, `student_id`, `subject_id`, `created_at`, 
 (2766, 1512, 32, '2020-11-07 04:50:02', '2020-11-07 04:50:02'),
 (2767, 1512, 33, '2020-11-07 04:50:02', '2020-11-07 04:50:02'),
 (2768, 1512, 34, '2020-11-07 04:50:02', '2020-11-07 04:50:02'),
-(2769, 1512, 35, '2020-11-07 04:50:02', '2020-11-07 04:50:02'),
-(2770, 1514, 50, '2020-11-23 08:27:55', '2020-11-23 08:27:55');
+(2769, 1512, 35, '2020-11-07 04:50:02', '2020-11-07 04:50:02');
 
 -- --------------------------------------------------------
 
@@ -4782,7 +4795,7 @@ INSERT INTO `subjects` (`id`, `doc_id`, `name`, `code`, `description`, `hours`, 
 (46, 57, 'Medical Informatics', 'MI321', NULL, 3, 'مقرر للمستوى الثالث', 1, '2020-11-02 11:15:18', '2020-11-02 14:41:00'),
 (47, 58, 'Introduction to Genomics', 'B311', NULL, 3, 'مقرر للمستوى الثالث', 1, '2020-11-02 11:15:18', '2020-11-02 14:41:57'),
 (48, 59, 'System Analysis and Design for Healthcare', 'MI427', NULL, 3, 'مقرر للمستوى الثالث', 1, '2020-11-02 11:15:18', '2020-11-02 14:40:25'),
-(50, 65, 'test subject', '112', 'test', 3, 'test notes', 1, '2020-11-23 08:27:32', '2020-11-23 08:27:45');
+(52, NULL, 'test 2', '123', NULL, 3, NULL, 1, '2020-11-25 09:53:17', '2020-11-25 09:53:17');
 
 -- --------------------------------------------------------
 
@@ -5246,7 +5259,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `email`, `phone`, `active`, `account_confirm`, `email_verified_at`, `password`, `type`, `fid`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'super admin', 'superadmin', 'super_admin@app.com', '01157404397', 1, 1, NULL, '$2y$10$exvvJGumxIgjbgZ.kq7CgOcdzAKOnrPCfeeJ46oH6yWXCkrZC3tbW', 'super_admin', NULL, NULL, '2020-10-24 07:26:11', '2020-11-10 10:41:08'),
+(1, 'super admin', 'superadmin', 'super_admin@app.com', '0123456789', 1, 1, NULL, '$2y$10$YSxKRg2eV7Flnu7TOGwW9OaLkpuq1VasBRRDzo76vTHXmJs8Hnt1.', 'super_admin', NULL, NULL, '2020-10-24 07:26:11', '2020-11-25 09:42:24'),
 (51, 'احمد محمد عبد القادر عبدالجواد', '30302082201514', '30302082201514', '30302082201514', 1, 0, NULL, '$2y$10$ujU7SVThmKDBCyrmOp6avevjbFyEhsX4HGRiQeeCQqMgLiZSxfKVK', 'student', '73', NULL, '2020-11-02 07:38:26', '2020-11-02 07:38:26'),
 (52, 'اسماء هشام كمال ابراهيم', '30206232201381', '30206232201381', '30206232201381', 1, 0, NULL, '$2y$10$vIrOviRbfNVz7jb72d9d2uAP5v69SHv2BdMZYAxAD8OIL4K65BetS', 'student', '74', NULL, '2020-11-02 07:38:26', '2020-11-02 07:38:26'),
 (53, 'اهله باسم  محمد حسن', '30208082201461', '30208082201461', '30208082201461', 1, 0, NULL, '$2y$10$cpVy48uR5J7aovSO4X5uwu1DUyHktHBuqZTOLYC.wV8JS6WV3xYFG', 'student', '75', NULL, '2020-11-02 07:38:27', '2020-11-02 07:38:27'),
@@ -5665,7 +5678,7 @@ INSERT INTO `users` (`id`, `name`, `username`, `email`, `phone`, `active`, `acco
 (1532, 'د. عمرو عبد العزيز', '01021264641', '01021264641', '01021264641', 1, 0, NULL, '$2y$10$jNFg0MmvrePEXX3a3niU/OgpIwmMqszTsLye3/6zA0OTyYD.KXa/m', 'doctor', '59', NULL, '2020-11-02 10:38:37', '2020-11-02 10:38:37'),
 (1538, 'احمد محمد احمد محمد', '30206102200197', '30206102200197', '30206102200197', 1, 0, NULL, '$2y$10$egrxMXhyHtW1IB.v1zDqJuArWym8v9wRdibBhB9yepFXZSLeuiDFu', 'student', '1512', NULL, '2020-11-07 04:35:22', '2020-11-07 04:35:22'),
 (1540, 'std test', 'std test', 'std1@gmail.com', '0114454475', 1, 0, NULL, '$2y$10$i3D1IQegRyTpkUPt5mmTiuUpwL04Zs3meG8ikR/wPfGE/KtaHdxSe', 'student', '1514', NULL, '2020-11-07 05:01:35', '2020-11-09 09:50:07'),
-(1541, 'test doc', 'test doc', 'testdoc@gmail.com', '00124552', 1, 0, NULL, '$2y$10$0XFR.u/IYY/gN.AuSST.oOleMZHlERl0IfMVJ8QS.VslcwinXISvq', 'doctor', '65', NULL, '2020-11-23 08:26:53', '2020-11-23 08:26:53');
+(1542, 'test 2', 'test2', 'test2@admin.com', '01234567890', 1, 0, NULL, '$2y$10$G.DK.8U3dNkM80VB7H6uauvY99bj89R1wAKccA.fKMNMo1zLLkug2', 'doctor', '67', NULL, '2020-11-25 09:50:03', '2020-11-25 09:50:03');
 
 --
 -- Indexes for dumped tables
@@ -5761,6 +5774,12 @@ ALTER TABLE `permission_user`
   ADD KEY `permission_user_permission_id_foreign` (`permission_id`);
 
 --
+-- Indexes for table `problems`
+--
+ALTER TABLE `problems`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `roles`
 --
 ALTER TABLE `roles`
@@ -5854,7 +5873,7 @@ ALTER TABLE `departments`
 -- AUTO_INCREMENT for table `doctors`
 --
 ALTER TABLE `doctors`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `lessons`
@@ -5872,7 +5891,7 @@ ALTER TABLE `levels`
 -- AUTO_INCREMENT for table `login_histories`
 --
 ALTER TABLE `login_histories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=149;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -5891,6 +5910,12 @@ ALTER TABLE `notifications`
 --
 ALTER TABLE `permissions`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+
+--
+-- AUTO_INCREMENT for table `problems`
+--
+ALTER TABLE `problems`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -5926,7 +5951,7 @@ ALTER TABLE `student_subjects`
 -- AUTO_INCREMENT for table `subjects`
 --
 ALTER TABLE `subjects`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT for table `translations`
@@ -5938,7 +5963,7 @@ ALTER TABLE `translations`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1542;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1543;
 
 --
 -- Constraints for dumped tables
